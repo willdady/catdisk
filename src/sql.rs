@@ -34,7 +34,7 @@ impl Client {
     /// Initialised tables and indexes
     async fn setup(&self) -> Result<()> {
         sqlx::query(
-            "CREATE TABLE IF NOT EXISTS files (
+            "CREATE TABLE files (
                     path TEXT UNIQUE ON CONFLICT REPLACE, 
                     ext TEXT, 
                     bytes INTEGER NOT NULL, 

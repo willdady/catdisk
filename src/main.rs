@@ -1,3 +1,4 @@
+use std::fs;
 use std::path::Path;
 use std::process::exit;
 
@@ -22,6 +23,9 @@ struct Args {
 #[tokio::main]
 async fn main() -> Result<()> {
     let args = Args::parse();
+
+    // Delete the existing database file if it exists
+    let _ = fs::remove_file(&args.file);
 
     let c = sql::Client::new(&args.file).await?;
 
