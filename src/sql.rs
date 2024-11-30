@@ -16,7 +16,6 @@ impl Client {
 
         if !Sqlite::database_exists(&db_url).await.unwrap_or(false) {
             match Sqlite::create_database(&db_url).await {
-                // Ok(_) => println!("Create db success"),
                 Err(error) => panic!("error: {}", error),
                 _ => (),
             }

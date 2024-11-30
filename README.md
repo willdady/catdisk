@@ -1,6 +1,6 @@
 # catdisk
 
-A simple file cataloging utility which recursively walks a directory and writes to a SQLite database.
+A simple file cataloging utility which recursively walks a directory and writes to an SQLite database.
 
 ## Setup and installation
 
