@@ -54,3 +54,7 @@ sqlite3 my-files.db 'SELECT path, CAST(bytes as FLOAT) / 1000000 as megabytes FR
 ```bash
 sqlite3 my-files.db 'SELECT path FROM files WHERE ext = "md"'
 ```
+
+## Licence
+
+This project is licensed under the terms of the [MIT license](LICENSE.md).
